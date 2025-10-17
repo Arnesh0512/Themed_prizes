@@ -226,7 +226,7 @@ export default function App() {
         }
 
         .hackathon-background[data-theme='dark'] .toggle-ball {
-          transform: translateX(34px);
+          transform: translateX(50px);
         }
 
         /* --- Card Wrapper --- */
@@ -356,16 +356,19 @@ export default function App() {
             margin: -10px auto 30px auto;
         }
 
+        
+
+      /* --- Buttons --- */
+
         .round-selector {
           display: flex;
           justify-content: center;
           gap: 15px;
           margin-bottom: 30px;
         }
-
         .round-btn {
-          padding: 10px 30px;
-          font-size: 1.1rem;
+          padding: 10px 28px;
+          font-size: 1rem;
           font-weight: 700;
           border: 2px solid var(--border-grey);
           background-color: transparent;
@@ -389,6 +392,14 @@ export default function App() {
           border-color: var(--primary-purple);
           box-shadow: 0 6px 15px var(--shadow-color-light);
         }
+
+        .button-container {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
 
         .round-content-wrapper {
             text-align: left;
@@ -455,34 +466,7 @@ export default function App() {
         }
 
 
-        /* --- Buttons --- */
-        .button-container {
-          display: flex;
-          justify-content: center;
-          gap: 15px;
-          flex-wrap: wrap;
-        }
-        .tab-button {
-          padding: 10px 25px;
-          font-size: 1rem;
-          font-weight: 600;
-          border: 2px solid var(--primary-purple);
-          border-radius: 12px;
-          background-color: transparent;
-          color: var(--primary-purple);
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 10px var(--shadow-color);
-        }
-        .tab-button:hover {
-          background-color: var(--primary-purple);
-          color: var(--card-bg-color);
-          transform: translateY(-2px);
-        }
-        .tab-button.active {
-          background-color: var(--primary-purple);
-          color: var(--card-bg-color);
-        }
+
 
         /* --- Prize Grid & Cards --- */
         .prize-grid {
@@ -626,13 +610,23 @@ export default function App() {
         {/* --- Prizes Card --- */}
           {/* --- Heading & Description for Prizes --- */}
           <div className="main-card-wrapper">
-            
+
+            <div className="decorative-dots">
+            {[...Array(15)].map((_, i) => <span key={i} className="dot"></span>)}
+            </div>
+
+            <section className="hackathon-section theme-section">
             <div className="section-title-box">
               <h1>Prizes</h1>
             </div>
             <p className="description-text">
               The <span className="highlight-text">LockedIn</span> hackathon recognizes the ingenuity, dedication, and technical excellence displayed over the 24-hour sprint. Beyond the invaluable experience and portfolio additions, the top three teams will walk away with exciting prizes and lasting recognition.
             </p>
+          </section>
+            
+           
+
+            
             <hr className="section-divider" />
           
 
@@ -643,7 +637,7 @@ export default function App() {
             {entries.map((entry) => (
               <button
                 key={entry}
-                className={`tab-button ${selected === entry ? "active" : ""}`}
+                className={`round-btn ${selected === entry ? "active" : ""}`}
                 onClick={() => setSelected(entry)}
               >
                 {entry}
