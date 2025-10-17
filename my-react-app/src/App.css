@@ -1,14 +1,26 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fafafa;
+  background-color: #ececec;
+}
+
+.main-box {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .app-container {
   display: flex;
-  height: 100vh;
+  align-items: flex-start;
+  gap: 20px;
 }
 
+/* Sidebar */
 .sidebar {
   width: 200px;
   background-color: #222;
@@ -16,6 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .sidebar-item {
@@ -34,20 +48,23 @@ body {
   background-color: #007bff;
 }
 
+/* Prize Grid */
 .prize-grid {
   flex: 1;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  padding: 20px;
   background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+/* Prize Cards */
 .prize-card {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 250px;
   text-align: center;
   margin: 10px;

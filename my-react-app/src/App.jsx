@@ -7,32 +7,34 @@ export default function App() {
   const [selected, setSelected] = useState("1st Place");
 
   const prizes = {
-    "1st Place": [
-      { img: "/first1.jpg", text: "Gold Medal with Certificate" },
-      { img: "/first2.jpg", text: "Trophy of Excellence" },
-      { img: "/first3.jpg", text: "Cash Prize ₹5000" },
+    "First Place Winner: Grand Prize ": [
+      { img: "/first1.jpg", text: "Cash Prize: A significant cash reward for the champions. " },
+      { img: "/first2.jpg", text: "Exclusive Swag: Premium Hackathon Merchandise Kit and exclusive IEEE GGSIPU goodies." },
+      { img: "/first3.jpg", text: "Certificates of Excellence: Official certificates recognizing the team as the First Place Winners of LockedIn." },
     ],
-    "2nd Place": [
-      { img: "/second1.jpg", text: "Silver Medal with Certificate" },
-      { img: "/second2.jpg", text: "Runner-up Trophy" },
-      { img: "/second3.jpg", text: "Cash Prize ₹3000" },
+    "Second Place Winner: Runner-Up ": [
+      { img: "/second1.jpg", text: "Cash Prize: A substantial cash reward for your outstanding efforts. " },
+      { img: "/second2.jpg", text: "Swag: Premium Hackathon Merchandise and exciting goodies." },
+      { img: "/second3.jpg", text: "Certificates of Excellence: Official certificates recognizing the team as the Second Place Winners of LockedIn." },
     ],
-    "3rd Place": [
-      { img: "/third1.jpg", text: "Bronze Medal with Certificate" },
-      { img: "/third2.jpg", text: "Achievement Trophy" },
-      { img: "/third3.jpg", text: "Cash Prize ₹1500" },
+    "Third Place Winner: Second Runner-Up ": [
+      { img: "/third1.jpg", text: "Cash Prize: A commendable cash prize to celebrate your success. " },
+      { img: "/third2.jpg", text: "Swag: Exclusive Hackathon Goodies." },
+      { img: "/third3.jpg", text: "Certificates of Excellence: Official certificates recognizing the team as the Third Place Winners of LockedIn." },
     ],
-    Participation: [
-      { img: "/part1.jpg", text: "Certificate of Participation" },
-      { img: "/part2.jpg", text: "Goodies Bag" },
+    Recognition_for_All_Participants: [
+      { img: "/part1.jpg", text: "Certificate of Participation: All registered members of the teams that submit a working prototype in the final round will receive an Official Certificate of Participation from IEEE GGSIPU." },
+      { img: "/part2.jpg", text: "Networking: An opportunity to connect with industry experts, mentors, and fellow tech enthusiasts." },
       { img: "/part3.jpg", text: "Motivational Booklet" },
     ],
   };
 
   return (
-    <div className="app-container">
-      <Sidebar selected={selected} setSelected={setSelected} />
-      <PrizeGrid prizes={prizes[selected]} />
+    <div className="main-box">
+      <div className="app-container">
+        <Sidebar selected={selected} setSelected={setSelected} />
+        <PrizeGrid prizes={prizes[selected]} />
+      </div>
     </div>
   );
 }
