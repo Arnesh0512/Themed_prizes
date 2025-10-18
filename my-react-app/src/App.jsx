@@ -194,6 +194,7 @@ export default function App() {
           align-items: center;
           box-shadow: 0 4px 15px var(--shadow-color);
           z-index: 100;
+          width: 74px;
 
           transition: all 0.3s ease;
         }
