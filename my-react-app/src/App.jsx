@@ -194,7 +194,7 @@ export default function App() {
           align-items: center;
           box-shadow: 0 4px 15px var(--shadow-color);
           z-index: 100;
-          width: 74px;
+          width: 60px;
 
           transition: all 0.3s ease;
         }
@@ -212,8 +212,8 @@ export default function App() {
         }
         
 
-        .theme-toggle .light-icon { margin-right: 10px; }
-        .theme-toggle .dark-icon { margin-left: 10px; }
+        .theme-toggle .light-icon { margin-right: 5px; }
+        .theme-toggle .dark-icon { margin-left: 5px; }
         
         .toggle-ball {
           width: 24px;
@@ -221,13 +221,12 @@ export default function App() {
           background: var(--primary-purple);
           border-radius: 50%;
           position: absolute;
-          transition: transform 0.4s ease;
 
           transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
 
         .hackathon-background[data-theme='dark'] .toggle-ball {
-          transform: translateX(50px);
+          transform: translateX(37px);
         }
 
         /* --- Card Wrapper --- */
